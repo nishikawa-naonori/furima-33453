@@ -29,8 +29,8 @@
 | info             | text       | null: false |
 | goods_status_id  | integer    | null: false |
 | delivery_fee_id  | integer    | null: false |
-| prefecture_id    | string     | null: false |
-| delivery_days_id | string     | null: false |
+| prefecture_id    | integer    | null: false |
+| delivery_days_id | integer    | null: false |
 | price            | integer    | null: false |
 
 ### Association
@@ -47,7 +47,7 @@
 
 ### Association
 
-- has_one    :purchases
+- has_one    :addresses
 - belongs_to :user
 - belongs_to :item
 
