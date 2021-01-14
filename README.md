@@ -10,7 +10,7 @@
 | name1              | string | null: false |
 | name2              | string | null: false |
 | name_kana1         | string | null: false |
-| name-kana2         | string | null: false |
+| name_kana2         | string | null: false |
 | birth_date         | date   | null: false |
 
 ### Association
