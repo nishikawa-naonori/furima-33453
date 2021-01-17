@@ -25,12 +25,12 @@
 | ------           | ------     | ----------- |
 | user             | referrence | null: false, foreign_key: true |
 | goods            | string     | null: false |
-| category_id      | integer    | null: false |
 | info             | text       | null: false |
+| category_id      | integer    | null: false |
 | goods_status_id  | integer    | null: false |
 | delivery_fee_id  | integer    | null: false |
 | prefecture_id    | integer    | null: false |
-| delivery_days_id | integer    | null: false |
+| delivery_day_id  | integer    | null: false |
 | price            | integer    | null: false |
 
 ### Association
