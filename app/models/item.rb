@@ -28,6 +28,4 @@ class Item < ApplicationRecord
   # 価格のバリデーション
   validates :price, numericality: { greater_than_or_equal_to: 300 } # 数字が300以上であるか
   validates :price, numericality: { less_than: 10_000_000 } # 数字が9999999以下か？
-
-
 end
