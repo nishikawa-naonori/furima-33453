@@ -67,17 +67,17 @@ RSpec.describe Item, type: :model do
         @item.valid?
         expect(@item.errors.full_messages).to include('Price must be less than 10000000')
       end
-      it '値段が全角数字の場合は登録できない' do
+      it '販売価格が全角数字の場合は登録できない' do
         @item.price = "３００"
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is not a number')
       end
-      it '半角英数混合では登録できない' do
+      it '販売価格が半角英数混合では登録できない' do
         @item.price = "1000Aa"
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is not a number')
       end
-      it '半角英語だけでは登録できないこと' do
+      it '販売価格が半角英語だけでは登録できないこと' do
         @item.price = "ABa"
         @item.valid?
         expect(@item.errors.full_messages).to include('Price is not a number')
