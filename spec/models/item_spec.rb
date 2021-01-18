@@ -55,7 +55,7 @@ RSpec.describe Item, type: :model do
       it '販売価格を記述していないと登録できない' do
         @item.price = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Price can't be blank")
+        expect(@item.errors.full_messages).to include("Price is not a number")
       end
       it '販売価格が300円以下だと登録できない' do
         @item.price = 299
