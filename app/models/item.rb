@@ -14,8 +14,6 @@ class Item < ApplicationRecord
     validates :goods
     # 商品の説明のバリデーション
     validates :info
-    # 価格のバリデーション
-    validates :price
   end
 
   # ジャンルの選択が「--」の時は保存できないようにする
