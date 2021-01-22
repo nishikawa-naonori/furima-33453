@@ -2,7 +2,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
   def change
     create_table :items do |t|
       ## 商品名
-      t.string :goods,                  null: false, default: ""
+      t.string :goods,                  null: false
       ## 商品の説明 
       t.text :info,                     null: false
       ## カテゴリー 
@@ -18,7 +18,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       ## 価格
       t.integer :price,                 null: false
       ## ユーザー管理テーブルとのアソシエーション
-      t.integer :user_id,               null: false
+      t.references :user, foreign_key: true
 
       ## デフォルトのタイムスタンプ
       t.timestamps
