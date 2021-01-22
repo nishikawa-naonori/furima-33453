@@ -8,7 +8,5 @@ FactoryBot.define do
     banchi                 { '15番地' }
     phone_number           { '09034053913' }
     building               { 'マウスビル' }
-    user_id                { 2 }
-    item_id                { 2 }
   end
 end
