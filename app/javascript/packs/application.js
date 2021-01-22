@@ -7,7 +7,8 @@ require("@rails/ujs").start()
 // require("turbolinks").start() //この行を削除する。JavaScriptファイルの処理が正常に動作しないことを防ぐ
 require("@rails/activestorage").start()
 require("channels")
-require("../item_price");
+require("../item_price")
+require("../card")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
