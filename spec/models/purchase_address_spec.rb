@@ -10,8 +10,11 @@ RSpec.describe PurchaseAddress, type: :model do
 
     context '商品購入がうまくいくとき' do
       it '全て正常値が入ってる場合' do
-        # binding.pry
         expect(@purchase_address).to be_valid
+      end
+      it '建物名がなくても購入できる' do
+        expect(@purchase_address).to be_valid
+        @purchase_address.building = ''
       end
     end
     context '商品購入ができない時' do
@@ -19,6 +22,11 @@ RSpec.describe PurchaseAddress, type: :model do
         @purchase_address.token = nil
         @purchase_address.valid?
         expect(@purchase_address.errors.full_messages).to include("Token can't be blank")
+      end
+      it '都道府県が選択されていないと登録できない' do
+        @purchase_address.prefecture_id = 1
+        @purchase_address.valid?
+        expect(@purchase_address.errors.full_messages).to include("Prefecture must be other than 1")
       end
       it '郵便番号がないと登録できない' do
         @purchase_address.postal_code = ''

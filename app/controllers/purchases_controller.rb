@@ -9,7 +9,6 @@ class PurchasesController < ApplicationController
 
 
   def create
-    # binding.pry
     @purchase_address = PurchaseAddress.new(purchase_params)
     if @purchase_address.valid?
       pay_item
@@ -40,5 +39,3 @@ class PurchasesController < ApplicationController
   end
   
 end
-
-#http://localhost:3000/items/2/purchases

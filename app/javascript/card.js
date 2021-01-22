@@ -2,10 +2,8 @@ const pay = () => {
   Payjp.setPublicKey(process.env.PAYJP_PUBLIC_KEY); // PAY.JPテスト公開鍵
   const form = document.getElementById("charge-form");
   form.addEventListener("submit", (e) => {
-    console.log("ok")
     // レイルズ側の送信処理を止めているのが、e.preventDefault();
     e.preventDefault();
-    console.log("ok")
 // "charge-form"というidでフォームの情報を取得し、それをFormDataオブジェクトとして生成
     const formResult = document.getElementById("charge-form");
     const formData = new FormData(formResult);

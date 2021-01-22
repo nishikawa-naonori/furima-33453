@@ -10,12 +10,10 @@
       <%= image_tag @item.image, class: 'buy-item-img' %>
       <div class='buy-item-right-content'>
         <h2 class='buy-item-text'>
-          <%#= "商品名" %>
           <%= @item.goods %>
         </h2>
         <div class='buy-item-price'>
           <p class='item-price-text'>¥<%= @item.price %></p>
-          <%#= '配送料負担' %>
           <p class='item-price-sub-text'><%= @item.delivery_fee.name %></p>
         </div>
       </div>
@@ -86,14 +84,12 @@
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_field :postal_code, class:"input-default", id:"postal-code", placeholder:"例）123-4567", maxlength:"8" %>
-        <%#= f.text_field 'hoge', class:"input-default", id:"postal-code", placeholder:"例）123-4567", maxlength:"8" %>
       </div>
       <div class="form-group">
         <div class='form-text-wrap'>
           <label class="form-text">都道府県</label>
           <span class="indispensable">必須</span>
         </div>
-        <%#= f.collection_select(:hoge, [], :hoge, :hoge, {}, {class:"select-box", id:"prefecture"}) %>
         <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box"}) %>
       </div>
       <div class="form-group">
